@@ -1,10 +1,10 @@
 {
   "name": "rest-api-aguas-since",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "type": "module",
   "scripts": {
-    "start": "node index.js",
+    "start": "node ./src/index.js",
     "dev": "nodemon ./src/index.js"
   },
   "dependencies": {
