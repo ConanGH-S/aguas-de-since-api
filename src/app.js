@@ -6,7 +6,7 @@ import * as router from './routes/router.js';
 const app = express();
 
 const CORSOPTIONS = {
-  origin: '*',
+  origin: 'http://localhost:3001',
   credentials: true,
   allowedHeaders: ['Authorization', 'Content-Type'],
   methods: ['GET', 'POST', 'PATCH'],
