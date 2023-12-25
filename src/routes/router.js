@@ -4,6 +4,6 @@ import userRouter from './user.routes.js';
 
 const router = Router();
 
-router.get('/v1/test', (_, res) => res.status(202).json('Somebody is watching me!'));
+router.get('/v1/tests', (_, res) => res.status(202).json('Somebody is watching me!'));
 
 export { router, emailRouter, userRouter };

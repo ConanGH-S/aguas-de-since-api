@@ -10,6 +10,6 @@ const emailRouter = Router();
  * @returns {Promise<import('express').Response>}
  * @async
  */
-emailRouter.post('/v1/email', checkEmailPayload, sendEmail);
+emailRouter.post('/v1/emails', checkEmailPayload, sendEmail);
 
 export default emailRouter;

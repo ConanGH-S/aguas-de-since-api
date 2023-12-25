@@ -1,11 +1,13 @@
 import { Router } from 'express';
-import { checkLoginData } from '../middlewares/user.middlewares.js';
-import { loginUser, registerUser } from '../controllers/user.controllers.js';
+import { checkUserData, checkUserExists, hashPassword } from '../middlewares/user.middlewares.js';
+import { getUsers, loginUser, registerUser } from '../controllers/user.controllers.js';
 
 const userRouter = Router();
 
-userRouter.post('/v1/user/register', registerUser);
+userRouter.get('/v1/users', getUsers);
 
-userRouter.post('/v1/user/login', checkLoginData, loginUser);
+userRouter.post('/v1/users/register', checkUserExists, checkUserData, hashPassword, registerUser);
+
+userRouter.post('/v1/users/login', checkUserExists, checkUserData, loginUser);
 
 export default userRouter;
